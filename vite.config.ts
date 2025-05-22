@@ -6,5 +6,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/harmonify-music-player/', // Update this to match your repository name
+  base: '/Harmonify/', // Update this to match your repository name
 });
