@@ -43,7 +43,7 @@ const Header: React.FC = () => {
           <a href="#app" className="text-white hover:text-purple-400 transition-colors">
             App
           </a>
-          <a href="href="https://play.google.com/store/apps/details?id=com.nova.groovy&pcampaignid=web_share"" className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full flex items-center hover:opacity-90 transition-opacity">
+          <a href="href="https://play.google.com/sta.groovy&pcampaignid=web_share"" className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full flex items-center hover:opacity-90 transition-opacity">
             <Download className="h-4 w-4 mr-2" />
             Download
           </a>
