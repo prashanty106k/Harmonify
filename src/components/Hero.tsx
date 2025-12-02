@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
               <a
-                href="#download"
+                href="https://play.google.com/store/apps/details?id=com.nova.groovy&pcampaignid=web_share"
                 className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-full flex items-center justify-center hover:opacity-90 transition-opacity w-full sm:w-auto"
               >
                 <Download className="h-5 w-5 mr-2" />
