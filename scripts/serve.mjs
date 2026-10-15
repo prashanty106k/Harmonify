@@ -1,0 +1,6 @@
+import http from 'node:http';
+import {readFile,stat} from 'node:fs/promises';
+import path from 'node:path';
+const root=path.resolve('dist'),port=Number(process.env.PORT||4173);
+const mime={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.txt':'text/plain; charset=utf-8','.xml':'application/xml'};
+http.createServer(async(req,res)=>{try{const url=new URL(req.url,'http://localhost');const pathname=decodeURIComponent(url.pathname);if(/^\/[^/]+\/app-ads\.txt$/.test(pathname)){res.writeHead(301,{Location:'/app-ads.txt'});res.end();return}let file=path.resolve(root,'.'+pathname);if(!file.startsWith(root+path.sep)&&file!==root){res.writeHead(403);res.end('Forbidden');return}let info;try{info=await stat(file)}catch{}if(info?.isDirectory()){if(!pathname.endsWith('/')){res.writeHead(301,{Location:pathname+'/'+url.search});res.end();return}file=path.join(file,'index.html')}let body;try{body=await readFile(file)}catch{res.statusCode=404;file=path.join(root,'404.html');body=await readFile(file)}res.setHeader('Content-Type',mime[path.extname(file)]||'application/octet-stream');res.setHeader('X-Content-Type-Options','nosniff');res.end(body)}catch{res.writeHead(400);res.end('Bad request')}}).listen(port,'127.0.0.1',()=>console.log(`Local: http://127.0.0.1:${port}`));
