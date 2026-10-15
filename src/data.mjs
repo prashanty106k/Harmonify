@@ -1,5 +1,5 @@
 export const site = {
-  name: 'NovaTech Apps', domain: 'https://novatech-apps.com', email: 'support@novatech-apps.com',
+  name: 'NovaTech Apps', domain: 'https://www.novatech-apps.com', email: 'support@novatech-apps.com',
   publisherId: 'pub-5447768257052428', updated: 'October 15, 2026',
   developerVerified: false,
 };

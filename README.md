@@ -42,7 +42,7 @@ dist/                 # Generated deployable website (build output)
 - **Apache:** upload the entire contents of `dist`, including `.htaccess`; enable `mod_rewrite` and `AllowOverride` as appropriate.
 - **Nginx:** upload `dist`, adapt the included HTTPS server-block snippet, and configure your domain and certificate.
 
-Use the apex domain `novatech-apps.com` as canonical and redirect `www` to the apex in your host settings. Do not configure an SPA catch-all: all routes are real directories and unknown URLs should return a 404. The local server is a development preview, not a production server.
+The existing GitHub Pages custom domain is `www.novatech-apps.com`; canonical metadata and the sitemap use that hostname. Preserve the existing domain and HTTPS settings. Do not configure an SPA catch-all: all routes are real directories and unknown URLs should return a 404. The local server is a development preview, not a production server.
 
 ## Before the apps launch
 
@@ -65,3 +65,9 @@ DM Sans and Manrope are self-hosted WOFF2 fonts with their SIL Open Font License
 ## Repository migration
 
 The custom domain in public/CNAME and the existing AdMob publisher ID were carried over from the previous repository. The seller certification authority value uses the correct f08c47fec0942fa0 syntax. Confirm this publisher ID in AdMob before monetization. Google Play and app policy disclosures remain pre-launch drafts. The source in this branch builds into dist; deploy dist using the hosting instructions above.
+
+## GitHub Pages deployment
+
+The repository uses `.github/workflows/pages.yml` to build, validate, and publish `dist` after every push to `main`. The Pages publishing source must be GitHub Actions. The pre-existing custom domain is `www.novatech-apps.com`; its CNAME and HTTPS settings are preserved. No npm installation is needed.
+
+Run `npm run build:pages` and `npm run test:pages` locally. The Pages build emits `.nojekyll` and matching app-ads.txt files under each app path because GitHub Pages cannot apply `_redirects`, `.htaccess`, custom response headers, or server-side rewrite rules. The root `/app-ads.txt` remains the canonical advertising file; nested paths serve identical plain text with HTTP 200 rather than an HTTP redirect. For server-side redirects and headers, use one of the other documented hosts.
