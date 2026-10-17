@@ -24,11 +24,15 @@ src/content/          # Original supplied Aura privacy, terms and feature text
 src/redirects.mjs     # Legacy Harmonify route mapping
 src/icons.mjs         # Original inline SVG icon system
 src/seo.mjs           # Sitemap, robots, structured data and optional Google verification
-scripts/build.mjs     # Generates all 18 HTML routes and sitemap
+scripts/build.mjs     # Generates all 21 HTML routes and sitemap
 scripts/serve.mjs     # Local preview with route redirects and real 404 responses
 scripts/check.mjs     # Generated-site validation
 scripts/check-seo.mjs # Sitemap/canonical/indexing and contact email consistency
 scripts/check-aura.mjs # Aura controls, legal section coverage and legacy routes
+scripts/check-learning.mjs # Learning content, legal sections and clock calculations
+src/learning-page.mjs # Learning App landing page, original SVG teaching clocks
+src/learning-data.mjs # Educational features, topics and FAQs
+src/learning-legal.mjs # Rendering of the supplied Learning App policies
 scripts/social.ps1    # Windows-only social PNG regeneration (assets are committed)
 public/assets/        # CSS, JS, favicons and social cards
 public/.htaccess      # Apache configuration
@@ -42,7 +46,13 @@ dist/                 # Generated deployable website (build output)
 
 ## Routes
 
-`/`, `/legal/`, `/contact/`, `/privacy-policy/`, `/terms/`, `/404.html`, `/app-ads.txt`. Each of `/aura-music-player/`, `/cinemora/`, and `/chromagrade/` has its own landing page, `/privacy-policy/`, and `/terms/`. App-nested `app-ads.txt` requests redirect to the root file on configured hosts. The three former `/harmonify/` pages redirect to their Aura equivalents; GitHub Pages uses immediate HTML redirects with canonical targets and accessible fallback links.
+`/`, `/legal/`, `/contact/`, `/privacy-policy/`, `/terms/`, `/404.html`, `/app-ads.txt`. Each of `/aura-music-player/`, `/learning-app/`, `/cinemora/`, and `/chromagrade/` has its own landing page, `/privacy-policy/`, and `/terms/`. App-nested `app-ads.txt` requests redirect to the root file on configured hosts. The three former `/harmonify/` pages redirect to their Aura equivalents; GitHub Pages uses immediate HTML redirects with canonical targets and accessible fallback links.
+
+## Learning App
+
+The education showcase at `/learning-app/` covers English and Marathi picture matching, fifteen English topics, 25-question tests, rupee counting, place value, clock learning/practice, local result history and PDF reporting. An Education filter, fourth app card, trust-center entry, app icon and social card are included. The landing page has an illustrative clock activity with plus/minus controls, English/Marathi time names, three target difficulties, answer checking and keyboard-accessible Play/Layouts/Setup tabs. It does not save learner results or export reports; the report illustration explains the Android app's supplied features.
+
+The supplied documents are retained in `src/content/learning-privacy.md` and `src/content/learning-terms.md`. Published pages substitute the known NovaTech brand and support email, retain the substantive disclosures and mark unconfirmed effective date, legal identity, support-retention details, artwork rights and governing jurisdiction as pending. These pre-release legal pages use `noindex` and are excluded from the sitemap. The current Android app is described as offline with no accounts, ads, analytics or developer-operated server connection. Android backup/device transfer and user-chosen report exports are explicitly disclosed; saved/shared copies must be managed separately. Full Marathi app localisation and individual-result deletion are not implemented. No Google advertising or Firebase SDK disclosure is borrowed from another app.
 
 ## Aura Music Player
 
@@ -62,7 +72,7 @@ The existing GitHub Pages custom domain is `www.novatech-apps.com`; canonical me
 
 ## Before the apps launch
 
-All three apps are deliberately labeled **Coming soon**. There are no invented ratings, install counts, production versions, app backend health checks, or developer-verification badges. Browser online status reports only `navigator.onLine`. App demonstrations and features are clearly described as concepts. Google Play buttons explain the pre-launch state until configured.
+All four apps are deliberately labeled **Coming soon**. There are no invented ratings, install counts, production versions, app backend health checks, or developer-verification badges. Browser online status reports only `navigator.onLine`. Browser demonstrations and reports are illustrative; Aura and Learning App feature descriptions follow the supplied app content. Google Play buttons explain the pre-launch state until configured.
 
 Update `src/data.mjs` with verified `playUrl`, `rating`, `version`, publisher ID, category, and actual features. Store links must point to the real Google Play listings; verified ratings should be maintained when displayed. The current developer panel explicitly states that Google Play verification is unconfirmed; update it only after verifying the business details and Console status. Add your responsible legal entity and address.
 

@@ -1,4 +1,5 @@
 export const paths = {
+ book:'<path d="M12 6C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Zm0 0v15"/>', clock:'<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>', coins:'<ellipse cx="9" cy="6" rx="6" ry="3"/><path d="M3 6v5c0 4 12 4 12 0V6M3 11v5c0 3 7 4 11 2m4-10c5 1 5 5 0 6m3-3v6c0 3-5 5-9 3"/>',
  arrow:'<path d="M7 17 17 7M6 7h11v11"/>', right:'<path d="M5 12h14m-6-6 6 6-6 6"/>',
  wave:'<path d="M4 10v4m4-8v12m4-16v20m4-16v12m4-8v4"/>',
  play:'<path d="m9 5 11 7-11 7Z"/>', aperture:'<circle cx="12" cy="12" r="9"/><path d="m9 4 9 15M4 10h17M7 20 16 4"/>',

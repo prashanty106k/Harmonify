@@ -1,13 +1,16 @@
 # Regenerates the original branded social preview images on Windows.
+param([string]$OnlySlug='')
 Add-Type -AssemblyName System.Drawing
 $assetPath = Join-Path $PSScriptRoot '..\public\assets'
 $cards = @(
   @{Slug='novatech';Title='Small apps.';Second='Extraordinary possibilities.';Category='THE NOVATECH APP STUDIO';Color='#6c38cf'},
   @{Slug='aura-music-player';Title='Aura Music Player';Second='Your music. Your phone. Pure sound.';Category='OFFLINE AUDIO / COMING SOON';Color='#7347dc'},
+  @{Slug='learning-app';Title='Learning App';Second='Little steps. Big discoveries.';Category='ENGLISH / MARATHI / MATHS / COMING SOON';Color='#6c38cf'},
   @{Slug='cinemora';Title='Cinemora';Second='Make every frame count.';Category='VIDEO & MEDIA / COMING SOON';Color='#d86d42'},
   @{Slug='chromagrade';Title='Chromagrade';Second='A world in your colors.';Category='CREATIVE TOOLS / COMING SOON';Color='#668b57'}
 )
 foreach ($card in $cards) {
+  if ($OnlySlug -and $card.Slug -ne $OnlySlug) { continue }
   $bitmap = New-Object System.Drawing.Bitmap 1200,630
   $graphic = [System.Drawing.Graphics]::FromImage($bitmap)
   $graphic.SmoothingMode = 'AntiAlias'
@@ -35,4 +38,4 @@ foreach ($card in $cards) {
   $bitmap.Dispose()
   foreach ($item in @($purple,$ink,$muted,$lime,$fontBrand,$fontLabel,$fontTitle,$fontSecond)) {$item.Dispose()}
 }
-Write-Output 'Created 4 original 1200x630 social cards.'
+Write-Output 'Created selected original 1200x630 social cards.'

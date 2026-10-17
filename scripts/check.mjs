@@ -8,3 +8,4 @@ async function walk(dir){for(const entry of await readdir(dir,{withFileTypes:tru
 await walk(root);const ads=await readFile(path.join(root,'app-ads.txt'),'utf8');assert.match(ads,/google\.com, pub-[X\d]+, DIRECT, f08c47fec0942fa0/);assert.equal(pages,6+apps.length*3+Object.keys(legacyRedirects).length);console.log(`PASS: ${pages} pages, ${links} local links/assets, metadata, anchors, unique IDs and app-ads.txt.`);
 await import('./check-seo.mjs');
 await import('./check-aura.mjs');
+await import('./check-learning.mjs');

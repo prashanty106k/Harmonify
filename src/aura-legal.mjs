@@ -15,7 +15,7 @@ function inline(value){
   return text.replace(/MDTOKEN(\d+)END/g,(_,index)=>tokens[Number(index)]);
 }
 
-function blocks(value){
+export function blocks(value){
   const lines=value.split('\n');let html='',paragraph=[];
   const flush=()=>{if(paragraph.length){html+=`<p>${inline(paragraph.join(' '))}</p>`;paragraph=[]}};
   for(let index=0;index<lines.length;index++){
