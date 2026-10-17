@@ -7,3 +7,9 @@
   to = "/app-ads.txt"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/harmonify/*"
+  to = "/aura-music-player/:splat"
+  status = 301
+  force = true

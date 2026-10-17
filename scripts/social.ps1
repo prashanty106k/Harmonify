@@ -3,7 +3,7 @@ Add-Type -AssemblyName System.Drawing
 $assetPath = Join-Path $PSScriptRoot '..\public\assets'
 $cards = @(
   @{Slug='novatech';Title='Small apps.';Second='Extraordinary possibilities.';Category='THE NOVATECH APP STUDIO';Color='#6c38cf'},
-  @{Slug='harmonify';Title='Harmonify';Second='Find your frequency.';Category='AUDIO & MUSIC / COMING SOON';Color='#7347dc'},
+  @{Slug='aura-music-player';Title='Aura Music Player';Second='Your music. Your phone. Pure sound.';Category='OFFLINE AUDIO / COMING SOON';Color='#7347dc'},
   @{Slug='cinemora';Title='Cinemora';Second='Make every frame count.';Category='VIDEO & MEDIA / COMING SOON';Color='#d86d42'},
   @{Slug='chromagrade';Title='Chromagrade';Second='A world in your colors.';Category='CREATIVE TOOLS / COMING SOON';Color='#668b57'}
 )

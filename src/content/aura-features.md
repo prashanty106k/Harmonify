@@ -1,0 +1,92 @@
+- 100% offline: plays the music on your phone. No account, no sign-up, no streaming.
+- 8D and 16D spatial audio: a native audio engine that moves your music around your head.
+- Studio-grade equalizer: 10 bands, 25 presets, your own custom presets.
+- Vibe presets: Slowed + Reverb, Nightcore, Lo-Fi and more in one tap.
+- Five home-screen widgets: control your music without opening the app.
+- Beautiful and smooth: a cream, purple and lime design with fluid animations and dark mode.
+- 8D spatial audio: music orbits 360° around your head.
+- 16D mode: a full sphere where sound also rises and dips.
+- A live 3D stage shows where the sound is moving in real time.
+- Adjustable spatial audio: depth, orbit speed, room size (Dry, Studio, Hall, Arena) and ambience.
+- 10-band graphic equalizer with preamp and a live response curve.
+- 25 built-in EQ presets (Bass Boost, Vocal, Rock, Pop, Jazz, Classical, Hip-Hop, Headphones, Late Night and more), plus your own saved presets.
+- 10 vibe presets:
+  - Slowed + Reverb
+  - Nightcore
+  - Concert Arena
+  - Party Next Door
+  - Lo-Fi Chill
+  - Daycore
+  - Bass Boosted
+  - Late Night Drive
+  - Phonk Drift
+  - Original (no effect)
+- Channel tools: balance, stereo width, mono and left/right swap.
+- ReplayGain (track or album) so every song plays at the same loudness, with clipping protection.
+- Built-in limiter that prevents distortion at high volume.
+- Spectrum visualizer that dances to your music.
+- Headphone detection: shows whether you’re on the speaker, wired headphones, Bluetooth or a USB DAC, and when 8D is ready.
+- Crossfade between songs, with adjustable duration and a gapless option.
+- Smooth fade in and out when you play or pause.
+- Playback speed and pitch control.
+- A-B repeat to loop any part of a song.
+- Bookmarks inside long tracks, mixes and audiobooks.
+- Resume where you left off in long tracks.
+- Sleep timer with a gentle fade-out.
+- Quick ±10 second skip buttons.
+- Skip silence automatically.
+- Auto-resume when headphones connect, and auto-pause when they’re unplugged.
+- Shuffle, repeat one and repeat all.
+- Smart queue: multiple queues, drag to reorder, swipe to add, and your queue is remembered.
+- Start radio: keep the music going from the current song.
+- Plays common formats: MP3, FLAC, AAC/M4A, OGG, Opus, WAV and more.
+- Browse by songs, albums, artists, folders and playlists.
+- Automatic library scan of your music folders, with folders you can include or exclude.
+- Accurate tags read from your files (title, artist, album, year, artwork).
+- Liked songs and favourite albums and artists.
+- Powerful search across your whole library.
+- Sort and filter everything: by date added, name, artist, year, play count or play time.
+- List or grid view.
+- Multi-select to play, queue or add many songs at once.
+- Folder browsing for people who organise music by folders.
+- Create, edit and reorder your own playlists.
+- Import and export M3U/M3U8 playlists.
+- Smart Playlist generator: pick a mood, activity, time of day and length, and get a playlist built from your own library.
+- One-tap mixes: Workout, Study, Sleep, Party, Driving, Chill and Romantic.
+- Search-based playlists: type “phonk”, “chill” or an artist name to build a playlist instantly.
+- Synced lyrics from .lrc files and from tags embedded in your songs.
+- Word-by-word highlighting for enhanced lyrics files.
+- Adjustable lyrics size and position.
+- Listening history.
+- Stats: your most played songs, artists and albums by week, month, year or all time.
+- Pause history whenever you want privacy.
+- Aura Player (4×2): cover, progress and controls, with an “Up next” queue view.
+- Aura Strip (4×1): a slim bar with the current song and controls.
+- Aura Disc (2×2): your album art as a record, with play and pause.
+- Aura Cover (3×3 to 4×4): full album art with controls on top.
+- Sound Studio (4×1): turn 8D on, switch 8D/16D and change vibes from the home screen.
+- All widgets follow light and dark mode.
+- Notification and lock-screen controls.
+- Bluetooth and headset buttons.
+- Android Auto: browse your library, search, and use voice requests (“Play … on Aura”).
+- Google Assistant: “Play [song or artist] on Aura Music Player”.
+- App shortcuts: long-press the icon for Search, Songs, Albums or Playlists.
+- Fresh cream, purple and lime design, plus a full dark mode and pure-black mode for AMOLED screens.
+- Optional album-art colours: the app can take its colours from the song playing.
+- Fluid animations:
+  - a glowing “aura” around the album art that pulses with your music;
+  - the cover eases back when you pause;
+  - titles slide as songs change;
+  - an animated navigation bar.
+- Player styles: clean, gradient, or blurred album-art background.
+- Customise which tabs appear, the default start tab, the slider style and a slim navigation bar.
+- Works completely offline: your music, playlists and history never leave your phone.
+- No account, no sign-up and no login.
+- Backup and restore your library, playlists and settings to a file you choose.
+- Ad privacy choices in Settings, where your region requires them.
+- Free and open source (GPL-3.0).
+- Available in about 40 languages.
+Tagline ideas for the hero section:
+- “Your music. Your phone. Pure sound.”
+- “The offline music player that surrounds you.”
+- “Feel your music in 8D.”

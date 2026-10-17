@@ -2,6 +2,7 @@ import {readFile,readdir} from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {site} from '../src/data.mjs';
+import {legacyRedirects} from '../src/redirects.mjs';
 
 const root=path.resolve('dist');
 const sitemap=await readFile(path.join(root,'sitemap.xml'),'utf8');
@@ -19,7 +20,11 @@ async function inspect(directory){
     const relative=path.relative(root,file).split(path.sep).join('/');
     const route=relative==='404.html'?'/404.html':'/'+relative.replace(/index\.html$/,'');
     const canonical=html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
-    assert.equal(canonical,site.domain+route,`Incorrect canonical for ${route}`);
+    assert.equal(canonical,site.domain+(legacyRedirects[route]||route),`Incorrect canonical for ${route}`);
+    if(legacyRedirects[route]){
+      assert.ok(html.includes('noindex,follow'),'Legacy redirect pages must not be indexed');
+      assert.ok(html.includes('content="0;url='+legacyRedirects[route]+'"'),'Legacy page must redirect to the new route');
+    }
     assert.ok(!html.includes('support@novatech-apps.com'),`Old email in ${route}`);
     const mailLinks=[...html.matchAll(/href="mailto:([^"?]+)/g)].map(match=>match[1]);
     assert.ok(mailLinks.length>0,`Missing contact email in ${route}`);

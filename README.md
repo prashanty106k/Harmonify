@@ -17,12 +17,18 @@ Open http://127.0.0.1:4173. `npm test` validates generated routes, local links, 
 
 ```text
 src/data.mjs          # Studio details, app catalog and launch configuration
+src/aura-page.mjs     # Dedicated Aura landing page and interactive studio markup
+src/aura-data.mjs     # Aura features, vibes, widgets and FAQs
+src/aura-legal.mjs    # Safe rendering of the supplied Aura legal documents
+src/content/          # Original supplied Aura privacy, terms and feature text
+src/redirects.mjs     # Legacy Harmonify route mapping
 src/icons.mjs         # Original inline SVG icon system
 src/seo.mjs           # Sitemap, robots, structured data and optional Google verification
-scripts/build.mjs     # Generates all 15 HTML routes and sitemap
+scripts/build.mjs     # Generates all 18 HTML routes and sitemap
 scripts/serve.mjs     # Local preview with route redirects and real 404 responses
 scripts/check.mjs     # Generated-site validation
 scripts/check-seo.mjs # Sitemap/canonical/indexing and contact email consistency
+scripts/check-aura.mjs # Aura controls, legal section coverage and legacy routes
 scripts/social.ps1    # Windows-only social PNG regeneration (assets are committed)
 public/assets/        # CSS, JS, favicons and social cards
 public/.htaccess      # Apache configuration
@@ -36,7 +42,13 @@ dist/                 # Generated deployable website (build output)
 
 ## Routes
 
-`/`, `/legal/`, `/contact/`, `/privacy-policy/`, `/terms/`, `/404.html`, `/app-ads.txt`. Each of `/harmonify/`, `/cinemora/`, and `/chromagrade/` has its own landing page, `/privacy-policy/`, and `/terms/`. App-nested `app-ads.txt` requests redirect to the root file on configured hosts.
+`/`, `/legal/`, `/contact/`, `/privacy-policy/`, `/terms/`, `/404.html`, `/app-ads.txt`. Each of `/aura-music-player/`, `/cinemora/`, and `/chromagrade/` has its own landing page, `/privacy-policy/`, and `/terms/`. App-nested `app-ads.txt` requests redirect to the root file on configured hosts. The three former `/harmonify/` pages redirect to their Aura equivalents; GitHub Pages uses immediate HTML redirects with canonical targets and accessible fallback links.
+
+## Aura Music Player
+
+Aura replaces Harmonify throughout the catalog, metadata, sitemap, icons and social cards. Its landing page presents offline playback, 8D/16D spatial sound, a 10-band equalizer, 25 app presets, ten vibes, five widgets, library tools, lyrics, Android integrations and customization. The browser studio has four demonstration EQ presets plus manual band adjustment, ten vibe controls and spatial panning. Its sound is synthesized locally after pressing Play; the widget and library illustrations are CSS mockups. The supplied feature description is retained in `src/content/aura-features.md` for release review.
+
+The Aura privacy and terms pages render the supplied Markdown in `src/content/aura-privacy.md` and `src/content/aura-terms.md`. Template author notes are omitted; the support email and brand are substituted. The supplied GPL licensing and source-offer clauses are preserved. Effective date, full legal publisher identity, postal address and governing jurisdiction remain visibly pending until supplied. Confirm those details and the released app's behavior before removing the pre-release notice or `noindex` setting. Aura's policy describes AdMob advertising and local playback; it does not claim Firebase integration.
 
 ## Deploy
 
@@ -54,7 +66,7 @@ All three apps are deliberately labeled **Coming soon**. There are no invented r
 
 Update `src/data.mjs` with verified `playUrl`, `rating`, `version`, publisher ID, category, and actual features. Store links must point to the real Google Play listings; verified ratings should be maintained when displayed. The current developer panel explicitly states that Google Play verification is unconfirmed; update it only after verifying the business details and Console status. Add your responsible legal entity and address.
 
-The requested `google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0` is present in `/app-ads.txt` as an explicit placeholder. Replace `publisherId` with your real AdMob publisher ID and rebuild; the placeholder cannot verify a publisher. List the root developer website in your store listings and validate crawling in AdMob. Private preview URLs cannot serve as public Play policy or advertising-verification endpoints.
+The existing publisher ID `pub-5447768257052428` is retained in `/app-ads.txt` with the Google seller certification value `f08c47fec0942fa0`. Confirm it against your AdMob account before monetization. List the root developer website in your store listings and validate crawling in AdMob. Private preview URLs cannot serve as public Play policy or advertising-verification endpoints.
 
 App privacy policies and terms are **pre-launch drafts**, visibly labeled and marked `noindex`. Before submission, audit each released app’s permission manifest, SDK versions/configurations, collection and sharing behavior, audience, regional consent, account/deletion requirements, retention and providers. Replace conditional text with accurate disclosures, finalize the legal entity, address, applicable law and effective date, and remove draft notices/noindex in `scripts/build.mjs` after approval. A website alone cannot establish legal compliance or Play Console verification. Website privacy text also identifies host logging and support retention details that the operator must confirm.
 
