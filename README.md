@@ -2,7 +2,7 @@
 
 A complete, dependency-free static studio site, app showcase, and pre-launch compliance hub. Semantic HTML, custom CSS, vanilla JavaScript. Node 20+ is needed only for generating and previewing files; no npm install is required.
 
-Public support and privacy contact: **freeinfonewz@gmail.com**. See [Google Search Console setup](docs/SEARCH-CONSOLE.md) for ownership verification and sitemap submission.
+Public support and privacy contact: **developer.novatechapps@gmail.com**. See [Google Search Console setup](docs/SEARCH-CONSOLE.md) for ownership verification and sitemap submission.
 
 ## Run
 

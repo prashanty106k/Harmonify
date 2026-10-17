@@ -1,5 +1,5 @@
 export const site = {
-  name: 'NovaTech Apps', domain: 'https://www.novatech-apps.com', email: 'freeinfonewz@gmail.com',
+  name: 'NovaTech Apps', domain: 'https://www.novatech-apps.com', email: 'developer.novatechapps@gmail.com',
   publisherId: 'pub-5447768257052428', updated: 'October 17, 2026',
   lastModified: '2026-10-17',
   // Optional URL-prefix verification: paste only the content value Google provides.
