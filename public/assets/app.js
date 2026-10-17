@@ -16,7 +16,7 @@
   window.addEventListener('online',connection);window.addEventListener('offline',connection);connection();
   $$('[data-soon]').forEach(b=>b.addEventListener('click',()=>toast(`${b.dataset.soon} is in development. A Google Play link will appear here when it launches.`)));
   $('.print-button')?.addEventListener('click',()=>window.print());
-  $('.copy-email')?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText('support@novatech-apps.com');toast('Support email copied.')}catch{toast('Email us at support@novatech-apps.com')}});
+  $('.copy-email')?.addEventListener('click',async()=>{const email=$('.contact-email a').textContent.trim();try{await navigator.clipboard.writeText(email);toast('Support email copied.')}catch{toast('Email us at '+email)}});
   $$('.demo-stage').forEach(stage=>{
     let context,gain,oscillators=[],playing=false;const playButton=$('.play-demo',stage),type=stage.dataset.demo;
     const iconPlay=playButton.innerHTML;

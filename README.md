@@ -2,6 +2,8 @@
 
 A complete, dependency-free static studio site, app showcase, and pre-launch compliance hub. Semantic HTML, custom CSS, vanilla JavaScript. Node 20+ is needed only for generating and previewing files; no npm install is required.
 
+Public support and privacy contact: **freeinfonewz@gmail.com**. See [Google Search Console setup](docs/SEARCH-CONSOLE.md) for ownership verification and sitemap submission.
+
 ## Run
 
 ```sh
@@ -16,9 +18,11 @@ Open http://127.0.0.1:4173. `npm test` validates generated routes, local links, 
 ```text
 src/data.mjs          # Studio details, app catalog and launch configuration
 src/icons.mjs         # Original inline SVG icon system
+src/seo.mjs           # Sitemap, robots, structured data and optional Google verification
 scripts/build.mjs     # Generates all 15 HTML routes and sitemap
 scripts/serve.mjs     # Local preview with route redirects and real 404 responses
 scripts/check.mjs     # Generated-site validation
+scripts/check-seo.mjs # Sitemap/canonical/indexing and contact email consistency
 scripts/social.ps1    # Windows-only social PNG regeneration (assets are committed)
 public/assets/        # CSS, JS, favicons and social cards
 public/.htaccess      # Apache configuration
