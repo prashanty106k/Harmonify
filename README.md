@@ -24,7 +24,7 @@ src/content/          # Original supplied Aura privacy, terms and feature text
 src/redirects.mjs     # Legacy Harmonify route mapping
 src/icons.mjs         # Original inline SVG icon system
 src/seo.mjs           # Sitemap, robots, structured data and optional Google verification
-scripts/build.mjs     # Generates all 21 HTML routes and sitemap
+scripts/build.mjs     # Generates all 24 HTML routes and sitemap
 scripts/serve.mjs     # Local preview with route redirects and real 404 responses
 scripts/check.mjs     # Generated-site validation
 scripts/check-seo.mjs # Sitemap/canonical/indexing and contact email consistency
@@ -46,7 +46,13 @@ dist/                 # Generated deployable website (build output)
 
 ## Routes
 
-`/`, `/legal/`, `/contact/`, `/privacy-policy/`, `/terms/`, `/404.html`, `/app-ads.txt`. Each of `/aura-music-player/`, `/learning-app/`, `/cinemora/`, and `/chromagrade/` has its own landing page, `/privacy-policy/`, and `/terms/`. App-nested `app-ads.txt` requests redirect to the root file on configured hosts. The three former `/harmonify/` pages redirect to their Aura equivalents; GitHub Pages uses immediate HTML redirects with canonical targets and accessible fallback links.
+`/`, `/legal/`, `/contact/`, `/privacy-policy/`, `/terms/`, `/404.html`, `/app-ads.txt`. Each of `/aura-music-player/`, `/learning-app/`, `/cinematic-pro/`, and `/chromagrade/` has its own landing page, `/privacy-policy/`, and `/terms/`. App-nested `app-ads.txt` requests redirect to the root file on configured hosts. The former `/harmonify/` and `/cinemora/` pages redirect to their Aura and Cinematic Pro equivalents; GitHub Pages uses immediate HTML redirects with canonical targets and accessible fallback links.
+
+## Cinematic Pro privacy policy
+
+Cinematic Pro replaces the Cinemora name and canonical route. Its general video-editor privacy policy is maintained in `src/content/cinematic-pro-privacy.md` and rendered by `src/cinematic-privacy.mjs`. It is published with an effective date of October 18, 2026, without a draft notice or `noindex`, and is included in the sitemap. The app's terms remain a pre-launch draft. Old Cinemora URLs and asset filenames remain compatible.
+
+The owner requested general policy wording and supplied an Android manifest fragment, recorded in `src/content/cinematic-pro-permissions.txt`. The policy names the declared media, camera, microphone, notification, vibration, internet and foreground media-processing permissions, the API 32 cap for legacy storage, and optional camera hardware. This does not establish actual runtime data flows or dependency-added permissions. Google AdMob and Firebase processing remain expressly conditional on the service being included in the installed version. No particular SDK integration, account system, cloud processing feature or offline-only architecture has been verified. Match these general disclosures to the actual released build and Play Console Data safety entries before store submission; publication is not a compliance certification.
 
 ## Learning App
 
@@ -78,7 +84,7 @@ Update `src/data.mjs` with verified `playUrl`, `rating`, `version`, publisher ID
 
 The existing publisher ID `pub-5447768257052428` is retained in `/app-ads.txt` with the Google seller certification value `f08c47fec0942fa0`. Confirm it against your AdMob account before monetization. List the root developer website in your store listings and validate crawling in AdMob. Private preview URLs cannot serve as public Play policy or advertising-verification endpoints.
 
-App privacy policies and terms are **pre-launch drafts**, visibly labeled and marked `noindex`. Before submission, audit each released app’s permission manifest, SDK versions/configurations, collection and sharing behavior, audience, regional consent, account/deletion requirements, retention and providers. Replace conditional text with accurate disclosures, finalize the legal entity, address, applicable law and effective date, and remove draft notices/noindex in `scripts/build.mjs` after approval. A website alone cannot establish legal compliance or Play Console verification. Website privacy text also identifies host logging and support retention details that the operator must confirm.
+Except for Cinematic Pro's published general privacy policy, app privacy policies and terms are **pre-launch drafts**, visibly labeled and marked `noindex`. Before submission, audit each released app’s permission manifest, SDK versions/configurations, collection and sharing behavior, audience, regional consent, account/deletion requirements, retention and providers. Replace conditional text with accurate disclosures, finalize the legal entity, address, applicable law and effective date, and remove remaining draft notices/noindex in `scripts/build.mjs` after approval. A website alone cannot establish legal compliance or Play Console verification. Website privacy text also identifies host logging and support retention details that the operator must confirm.
 
 References used to prepare the policy structure: [Google Play User Data](https://support.google.com/googleplay/android-developer/answer/10144311), [Data safety](https://support.google.com/googleplay/android-developer/answer/10787469), [AdMob data disclosures](https://developers.google.com/admob/android/privacy/play-data-disclosure), [Firebase privacy](https://firebase.google.com/support/privacy), and [app-ads.txt setup](https://support.google.com/admob/answer/9363762).
 
@@ -90,7 +96,7 @@ DM Sans and Manrope are self-hosted WOFF2 fonts with their SIL Open Font License
 
 ## Repository migration
 
-The custom domain in public/CNAME and the existing AdMob publisher ID were carried over from the previous repository. The seller certification authority value uses the correct f08c47fec0942fa0 syntax. Confirm this publisher ID in AdMob before monetization. Google Play and app policy disclosures remain pre-launch drafts. The source in this branch builds into dist; deploy dist using the hosting instructions above.
+The custom domain in public/CNAME and the existing AdMob publisher ID were carried over from the previous repository. The seller certification authority value uses the correct f08c47fec0942fa0 syntax. Confirm this publisher ID in AdMob before monetization. App publication does not establish Google Play verification; policy status is described above. The source in this branch builds into dist; deploy dist using the hosting instructions above.
 
 ## GitHub Pages deployment
 

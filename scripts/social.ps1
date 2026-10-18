@@ -6,7 +6,7 @@ $cards = @(
   @{Slug='novatech';Title='Small apps.';Second='Extraordinary possibilities.';Category='THE NOVATECH APP STUDIO';Color='#6c38cf'},
   @{Slug='aura-music-player';Title='Aura Music Player';Second='Your music. Your phone. Pure sound.';Category='OFFLINE AUDIO / COMING SOON';Color='#7347dc'},
   @{Slug='learning-app';Title='Learning App';Second='Little steps. Big discoveries.';Category='ENGLISH / MARATHI / MATHS / COMING SOON';Color='#6c38cf'},
-  @{Slug='cinemora';Title='Cinemora';Second='Make every frame count.';Category='VIDEO & MEDIA / COMING SOON';Color='#d86d42'},
+  @{Slug='cinematic-pro';Title='Cinematic Pro';Second='Make every frame count.';Category='VIDEO & MEDIA / COMING SOON';Color='#d86d42'},
   @{Slug='chromagrade';Title='Chromagrade';Second='A world in your colors.';Category='CREATIVE TOOLS / COMING SOON';Color='#668b57'}
 )
 foreach ($card in $cards) {

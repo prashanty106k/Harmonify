@@ -1,0 +1,16 @@
+Android manifest fragment supplied by the owner on October 18, 2026.
+This is a fragment, not a complete or merged manifest. Dependencies and actual SDK configuration were not supplied.
+
+INTERNET
+CAMERA
+VIBRATE
+RECORD_AUDIO
+READ_MEDIA_IMAGES
+READ_MEDIA_VIDEO
+READ_MEDIA_AUDIO
+POST_NOTIFICATIONS
+READ_EXTERNAL_STORAGE (maxSdkVersion=32)
+FOREGROUND_SERVICE
+FOREGROUND_SERVICE_MEDIA_PROCESSING
+
+android.hardware.camera (required=false)

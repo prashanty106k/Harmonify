@@ -6,6 +6,8 @@ ErrorDocument 404 /404.html
   RewriteRule ^[^/]+/app-ads\.txt$ /app-ads.txt [R=301,L]
   RewriteRule ^harmonify/?$ /aura-music-player/ [R=301,L]
   RewriteRule ^harmonify/(.*)$ /aura-music-player/$1 [R=301,L]
+  RewriteRule ^cinemora/?$ /cinematic-pro/ [R=301,L]
+  RewriteRule ^cinemora/(.*)$ /cinematic-pro/$1 [R=301,L]
 </IfModule>
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"

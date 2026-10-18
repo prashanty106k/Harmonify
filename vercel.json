@@ -13,6 +13,11 @@
       "source": "/harmonify/:path*",
       "destination": "/aura-music-player/:path*",
       "permanent": true
+    },
+    {
+      "source": "/cinemora/:path*",
+      "destination": "/cinematic-pro/:path*",
+      "permanent": true
     }
   ],
   "headers": [

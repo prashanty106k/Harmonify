@@ -13,3 +13,9 @@
   to = "/aura-music-player/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/cinemora/*"
+  to = "/cinematic-pro/:splat"
+  status = 301
+  force = true
