@@ -49,11 +49,11 @@ export const learningFeatures = [
 ];
 
 export const learningFaq = [
-  ['Does Learning App need the internet?', 'Core activities work offline after installation. Android backup, sharing and a storage or messaging service you choose may use the internet under their own settings.'],
+  ['Does DnyanVedh need the internet?', 'Core activities work offline after installation. Android backup, sharing and a storage or messaging service you choose may use the internet under their own settings.'],
   ['Are there ads or learner accounts?', 'The current app has no sign-in, advertisements, analytics integration, automatic crash reporting or developer-operated server connection. It does not ask for a child’s name or create named learner profiles.'],
   ['Is the whole app available in Marathi?', 'Marathi activities include Devanagari instructions and answers, and the clock section lets you choose English or Marathi. Some navigation and report areas still use English; full app-wide localisation is not implemented.'],
   ['Where are test results stored?', 'In private app storage on the device. Android may back up or transfer results according to device settings. Adults choose whether to save or share a PDF; those copies can be held by other apps or cloud providers.'],
   ['Can I delete results?', 'Android’s Clear storage control removes all local app data and resets the app. There is currently no individual-result deletion control. Delete exported PDFs separately, and manage backup copies in device settings.'],
   ['What should I know about the clock tests?', 'They use a twelve-hour teaching clock and do not distinguish AM from PM. Full-hour tests have twelve possible times, so some times necessarily repeat in a 25-question test.'],
-  ['Is it available on Google Play?', 'Learning App is not yet live on Google Play. We’ll add its store link here when it is published.']
+  ['Is it available on Google Play?', 'DnyanVedh is not yet live on Google Play. We’ll add its store link here when it is published.']
 ];
