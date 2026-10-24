@@ -33,6 +33,7 @@ scripts/check-learning.mjs # Learning content, legal sections and clock calculat
 src/learning-page.mjs # DnyanVedh landing page, original SVG teaching clocks
 src/learning-data.mjs # Educational features, topics and FAQs
 src/learning-legal.mjs # Rendering of the supplied DnyanVedh policies
+src/chromagrade-page.mjs # Custom ChromaGrade landing page and editor shell
 scripts/social.ps1    # Windows-only social PNG regeneration (assets are committed)
 public/assets/        # CSS, JS, favicons and social cards
 public/.htaccess      # Apache configuration
@@ -53,6 +54,10 @@ dist/                 # Generated deployable website (build output)
 Cinematic Pro replaces the Cinemora name and canonical route. Its general video-editor privacy policy is maintained in `src/content/cinematic-pro-privacy.md` and rendered by `src/cinematic-privacy.mjs`. It is published with an effective date of October 18, 2026, without a draft notice or `noindex`, and is included in the sitemap. The app's terms remain a pre-launch draft. Old Cinemora URLs and asset filenames remain compatible.
 
 The owner requested general policy wording and supplied an Android manifest fragment, recorded in `src/content/cinematic-pro-permissions.txt`. The policy names the declared media, camera, microphone, notification, vibration, internet and foreground media-processing permissions, the API 32 cap for legacy storage, and optional camera hardware. This does not establish actual runtime data flows or dependency-added permissions. Google AdMob and Firebase processing remain expressly conditional on the service being included in the installed version. No particular SDK integration, account system, cloud processing feature or offline-only architecture has been verified. Match these general disclosures to the actual released build and Play Console Data safety entries before store submission; publication is not a compliance certification.
+
+## ChromaGrade showcase
+
+The custom `/chromagrade/` landing page is rendered from `src/chromagrade-page.mjs`. Its CSS and three JavaScript assets load only on that landing route: `chromagrade.css`, `chromagrade-data.js`, `chromagrade-engine.js` and `chromagrade.js`. The supplied editor includes a WebGL 2 grading preview, locally embedded sample image and preset LUTs, before/after comparison, undo/redo, grading tabs and a guided tour. The file picker is designed to read local images, videos and `.cube` LUTs in the browser; there is no upload endpoint. The export sheet explains the app's export features and does not save files from this demo. Unsupported browsers receive a WebGL message. Shared navigation, theme controls, existing privacy and terms routes, metadata and Google Play availability remain integrated with the studio site.
 
 ## DnyanVedh (Learning App)
 
