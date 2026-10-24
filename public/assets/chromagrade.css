@@ -38,8 +38,7 @@
   --cg-font-display: "Manrope", "DM Sans", Arial, sans-serif;
   --cg-font-body: "DM Sans", Arial, sans-serif;
   --cg-font-app: Roboto, system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  --cg-screen-w: 390px;
-  --cg-screen-h: clamp(640px, calc(100svh - 56px), 844px);
+  --cg-screen-w: 340px;
 }
 .cg-stage, .cg-more { color: var(--cg-ink); font-family: var(--cg-font-body); }
 /* Dark theme for the page around the phone (the site's toggle sets data-theme on <html>). */
@@ -108,7 +107,7 @@ svg.cg-icon .cg-fill { fill: currentColor; stroke: none; }
   padding-top: 8px;
 }
 .cg-intro { grid-area: intro; padding-top: clamp(8px, 4vh, 48px); }
-.cg-device { grid-area: device; position: sticky; top: 16px; }
+.cg-device { grid-area: device; position: sticky; top: 16px; width: calc(var(--cg-screen-w) + 14px); max-width: 100%; }
 .cg-tour { grid-area: tour; }
 .cg-own { grid-area: own; }
 
@@ -166,11 +165,12 @@ svg.cg-icon .cg-fill { fill: currentColor; stroke: none; }
 
 /* ---- the phone ------------------------------------------------------------------------------------------ */
 .cg-phone {
-  position: relative; width: calc(var(--cg-screen-w) + 14px); padding: 7px; border-radius: 56px; background: var(--cg-bezel);
+  position: relative; width: 100%; padding: 7px; border-radius: 48px; background: var(--cg-bezel);
   box-shadow: 0 1px 0 1px #2a2730 inset, 0 30px 60px -20px rgba(31, 22, 50, 0.45), 0 12px 24px -12px rgba(31, 22, 50, 0.35);
 }
 .cg-screen {
-  position: relative; width: var(--cg-screen-w); height: var(--cg-screen-h); border-radius: 49px; overflow: hidden;
+  /* Keep phone proportions at every viewport size; a short browser must not squash the device. */
+  position: relative; width: 100%; height: auto; aspect-ratio: 9 / 19.5; border-radius: 41px; overflow: hidden;
   background: var(--cg-bg); color: var(--cg-ink); font-family: var(--cg-font-app); display: flex; flex-direction: column;
   isolation: isolate; container-type: inline-size; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
 }
@@ -205,7 +205,7 @@ svg.cg-icon .cg-fill { fill: currentColor; stroke: none; }
 
 /* ---- viewer ----------------------------------------------------------------------------------------------- */
 .cg-viewer {
-  flex: none; position: relative; height: 236px; background: var(--cg-viewer); overflow: hidden;
+  flex: none; position: relative; height: auto; aspect-ratio: 16 / 9; background: var(--cg-viewer); overflow: hidden;
   border-top: 1px solid var(--cg-border); touch-action: pan-y; user-select: none; -webkit-user-select: none;
 }
 .cg-viewer canvas#cg-gl, .cg-viewer canvas.cg-guides { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
@@ -478,13 +478,12 @@ svg.cg-icon .cg-fill { fill: currentColor; stroke: none; }
 }
 @media (max-width: 900px) {
   .cg-stage { grid-template-columns: minmax(0, 1fr); grid-template-areas: "intro" "device" "tour" "own"; grid-template-rows: none; }
-  .cg-device { position: static; justify-self: center; width: 100%; max-width: 480px; }
+  .cg-device { position: static; justify-self: center; width: 100%; max-width: calc(var(--cg-screen-w) + 14px); }
   .cg-intro { padding-top: 0; }
   .cg-tour, .cg-own { max-width: none; }
-  .cg-phone { width: 100%; padding: 0; border-radius: 22px; background: none; box-shadow: 0 14px 34px -18px rgba(31, 22, 50, 0.4); }
-  .cg-screen { --cg-screen-w: 100%; width: 100%; height: clamp(600px, calc(100svh - 24px), 860px); border-radius: 22px; border: 1px solid var(--cg-border); }
-  .cg-screen::before, .cg-statusbar { display: none; }
-  .cg-viewer { height: clamp(210px, 60vw, 270px); }
+}
+@media (min-width: 901px) and (max-height: 820px) {
+  .cg-device { position: static; }
 }
 @media (max-width: 640px) {
   .cg-more-grid { grid-template-columns: minmax(0, 1fr); }
